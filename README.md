@@ -10,12 +10,12 @@ Um exemplo de utilização:
 
 #include <pidino.h>
 
-#define MOTOR1_P1 6
-#define MOTOR1_P2 5
-#define Kp 30.0
-#define Ki  0.0
-#define Kd  0.0
-#define SETPOINT 68.90
+##define MOTOR1_P1 6
+##define MOTOR1_P2 5
+##define Kp 30.0
+##define Ki  0.0
+##define Kd  0.0
+##define SETPOINT 68.90
 
 pidino pid(Kp,Ki,Kd,SETPOINT);
 
