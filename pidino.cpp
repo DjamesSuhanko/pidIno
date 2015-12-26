@@ -1,4 +1,4 @@
-#include "pidIno.h"
+#include "pidino.h"
 
 //inicialmente um bom valor eh 1.0, 0, 0, valorPadraoDesejado
 pidIno::pidIno(float _Kp, float _Ki, float _Kd, float _setPoint)
