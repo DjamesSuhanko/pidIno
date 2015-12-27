@@ -1,27 +1,12 @@
 #include <pidino.h>
 #include <Brain.h>
 /*
-TODO: Kp pode ser necessario menos instabilidade
-      Ki precisa ser testado
-      Kd talvez nao seja implementado, exceto um teste com Kp bem baixo
-
-      Velocidade pode ser o problema: controlar a minima e maxima
-      Setpoint pode ser que precise alteracao.
-      Aumentar ponto de equilibrio pra ver se nao esta em um sistema impossivel
-      Remover Integral se tiver windup
-      Implementar windup adequadamente
-      Reduzir tempo de feedback
-*/
-
 
 #define MOTOR1_P1 6
 #define MOTOR1_P2 5
-//30
 #define Kp 35.0
-//0.3
 #define Ki  0.2
 #define Kd  0.5
-//68.90
 #define SETPOINT 66.20
 
 int sleeper = 0;
@@ -29,8 +14,6 @@ pidino pid(Kp,Ki,Kd,SETPOINT);
 Brain motors(0,MOTOR1_P1,MOTOR1_P2,SETPOINT);
 
 void doPid(float fromSensor){
-  //TODO: tunning = PID + SETPOINT?
-  //TODO: integral/nvoltas ?
   /* Nesse momento eh importante focar no controle proporcional da velocidade do motor.
    *  fazer o map primeiro e testar junto com o pid
   */
